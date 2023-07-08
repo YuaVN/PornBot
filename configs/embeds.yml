@@ -1,0 +1,559 @@
+settings: 
+  color: 
+    default: "#FB00A6"
+    success: "#00FBA1"
+    warning: "#FB4B00"
+    error: "#FB0650"
+    custom: "#2f3137" 
+  
+  footer:
+    text: "HexBot-V2"
+    icon: "https://i.imgur.com/jOuUXqE.gif"
+
+embeds: 
+  error-cmd: 
+    title: ""
+    color: "error"
+    description: 
+      - "❌ ``Error while executing the command!``"
+    thumbnail: ""
+    image: ""
+    timeStamp: false
+    author:
+      name: ""
+      icon: ""
+      url: ""
+    footer:
+      text: ""
+      icon: ""
+    fields: []
+  
+  invalid-channel: 
+    title: ""
+    color: "error"
+    description: 
+      - "❌ ``You cannot do this at this channel!``"
+      - "> Allowed Channels:"
+      - "> {allowed_channels}"
+    thumbnail: ""
+    image: ""
+    timeStamp: false
+    author:
+      name: ""
+      icon: ""
+      url: ""
+    footer:
+      text: ""
+      icon: ""
+    fields: []
+
+  cmd-disabled: 
+    title: ""
+    color: "error"
+    description: 
+      - "❌ ``This command has been disabled!``"
+    thumbnail: ""
+    image: ""
+    timeStamp: false
+    author:
+      name: ""
+      icon: ""
+      url: ""
+    footer:
+      text: ""
+      icon: ""
+    fields: []  
+  
+  no-perm: 
+    title: ""
+    color: "error"
+    description: 
+      - "❌ ``You don't have permission to use this command!``"
+    thumbnail: ""
+    image: ""
+    timeStamp: false
+    author:
+      name: ""
+      icon: ""
+      url: ""
+    footer:
+      text: ""
+      icon: ""
+    fields: []
+  
+  # Crash
+  black-list-ip: 
+    title: ""
+    color: "error"
+    description: 
+      - "❌ `This ip address is currently blacklisted!`"
+    thumbnail: ""
+    image: ""
+    timeStamp: false
+    author:
+      name: ""
+      icon: ""
+      url: ""
+    footer:
+      text: ""
+      icon: ""
+    fields: []
+  
+  invalid-verison: 
+    title: ""
+    color: "error"
+    description: 
+      - "> Version `{version}` is not valid, please *choose*"
+      - "> version from one of the **choices!**"
+    thumbnail: ""
+    image: ""
+    timeStamp: false
+    author:
+      name: ""
+      icon: ""
+      url: ""
+    footer:
+      text: ""
+      icon: ""
+    fields: []
+  
+  invalid-method: 
+    title: ""
+    color: "error"
+    description: 
+      - "> Method with **ID** `{method}` is not valid, please"
+      - "> choose *method* from one of the **choices!**"
+    thumbnail: ""
+    image: ""
+    timeStamp: false
+    author:
+      name: ""
+      icon: ""
+      url: ""
+    footer:
+      text: ""
+      icon: ""
+    fields: [] 
+  
+  method-disabled:  
+    title: ""
+    color: "error"
+    description: 
+      - "> The __method__ you just entered has been"
+      - "> **disabled** in the config. If you are admin"
+      - "> then  *enable it or else use another method*!"
+      - "```🔗 Information```"
+      - "> Method: `{method_name}`"
+      - "> ```{method_id}```"
+    thumbnail: ""
+    image: ""
+    timeStamp: false
+    author:
+      name: ""
+      icon: ""
+      url: ""
+    footer:
+      text: "Requested by {user_tag}"
+      icon: "{user_icon}"
+    fields: [] 
+  
+  no-role: 
+    title: ""
+    color: "error"
+    description: 
+      - "> The __method__ you need to use requires"
+      - "> certain **roles.** And you do not meet it!"
+      - "```🔗 Information```"
+      - "> Method: `{method_name}`"
+      - "> ```{method_id}```"
+    thumbnail: ""
+    image: ""
+    timeStamp: false
+    author:
+      name: ""
+      icon: ""
+      url: ""
+    footer:
+      text: "Requested by {user_tag}"
+      icon: "{user_icon}"
+    fields: [] 
+  
+  send-attack: 
+    title: "🚀 Attack Has Been Started"
+    color: "custom"
+    description: 
+      - "```🔗 Information```"
+      - "> Host: **{host}:{port}**"
+      - "> Method: **{method_name}** (`{method_id}`)"
+    thumbnail: ""
+    image: ""
+    timeStamp: false
+    author:
+      name: ""
+      icon: ""
+      url: ""
+    footer:
+      text: "Requested by {user_tag}"
+      icon: "{user_icon}"
+    fields: 
+      - name: "🔌 __**Version**__"
+        value: "```{version} ({version_code})```"
+        inline: true
+      - name: "👻 __**CPS & Time**__"
+        value: "```{cps} CPS | {time} Seconds```"
+        inline: true
+    
+  attack-stopped: 
+    title: "🚨 Attack Has Been Stopped"
+    color: "custom"
+    description: 
+      - "> This __attack__ has now been **stopped**!"
+      - "```🔗 Information```"
+      - "> Attack By: <@{user_id}>"
+      - "> (`{user_id}`)"
+    thumbnail: "{user_icon}"
+    image: ""
+    timeStamp: false
+    author:
+      name: ""
+      icon: ""
+      url: ""
+    footer:
+      text: "{footer_text}"
+      icon: "{footer_icon}"
+    fields: []
+
+  # Stop 
+  confirm-stop: 
+    title: ""
+    color: "custom"
+    description: 
+      - "> To proceed with __stopping__ the attacks."
+      - "> Please **select** the green button!"
+    thumbnail: ""
+    image: ""
+    timeStamp: false
+    author:
+      name: ""
+      icon: ""
+      url: ""
+    footer:
+      text: "Requested by {user_tag}"
+      icon: "{user_icon}"
+    fields: []
+  
+  stop-success:  
+    title: "✅ Stopped Success"
+    color: "custom"
+    description: 
+      - "> One person **executed** the stop command"
+      - "> All attacks have been __stopped__ successfully!"
+    image: ""
+    timeStamp: false
+    author:
+      name: ""
+      icon: ""
+      url: ""
+    footer:
+      text: "Requested by {user_tag}"
+      icon: "{user_icon}"
+    fields: []
+  
+  # Resolver 
+  checking-data: 
+    title: "⌛ Starting Resolver Host"
+    color: "custom"
+    description: 
+      - "> We have __sent__ the information to be **analyzed**"
+      - ">  and are waiting for the *results to be sent back*!"
+      - "> "
+      - ">  This process may *take a while*! Please wait :("
+    image: ""
+    timeStamp: false
+    author:
+      name: ""
+      icon: ""
+      url: ""
+    footer:
+      text: "Requested by {user_tag}"
+      icon: "{user_icon}"
+    fields: 
+      - name: "📡 __**Host**__"
+        value: "```{host}```"
+        inline: true
+  
+  offline-host: 
+    title: "🚫 Host Is Offline"
+    color: "custom"
+    description: 
+      - "> We have **received** the results of the __analysis__."
+      - "> You can see the *related information* below!"
+      - "```🔗 Information```"
+      - "> Host: `{host}`"
+      - "> Type: `{type}`"
+    image: ""
+    timeStamp: false
+    author:
+      name: ""
+      icon: ""
+      url: ""
+    footer:
+      text: "Requested by {user_tag}"
+      icon: "{user_icon}"
+    fields: 
+      - name: "📡 __**Ip Address & Port**__"
+        value: "```{ip_address} | {port}```"
+        inline: true
+      - name: "🔗 __**Status**__"
+        value: "```🔴 Offline```"
+        inline: true
+  
+  online-host: 
+    title: "✅ Host Is Online"
+    color: "custom"
+    description: 
+      - "> We have **received** the results of the __analysis__."
+      - "> You can see the *related information* below!"
+      - "```🔗 Information```"
+      - "> Host: `{host}:{port}`"
+      - "> Type: `{type}`"
+    image: ""
+    timeStamp: false
+    author:
+      name: ""
+      icon: ""
+      url: ""
+    footer:
+      text: "Requested by {user_tag}"
+      icon: "{user_icon}"
+    fields: 
+      - name: "📡 __**Ip Address**__"
+        value: "```{ip_address}```"
+        inline: true
+      - name: "🔗 __**Status**__"
+        value: "```🟢 Online```"
+        inline: true
+      - name: "👤 __**Players**__"
+        value: "```{players_online}/{players_max}```"
+        inline: true
+      - name: "📋 __**Motd**__"
+        value: "```{motd}```"
+        inline: true
+  
+  # Whois
+  starting-checking: 
+    title: "✅ Starting Query Domain"
+    color: "custom"
+    description: 
+      - "> We have __sent__ the information to be **queried**"
+      - "> and are waiting for the *results to be sent back*!"
+      - "> "
+      - ">  This process may *take a while*! Please wait :("
+    image: ""
+    timeStamp: false
+    author:
+      name: ""
+      icon: ""
+      url: ""
+    footer:
+      text: "Requested by {user_tag}"
+      icon: "{user_icon}"
+    fields: 
+      - name: "🌍 __**Domain**__"
+        value: "```{domain}```"
+        inline: true 
+    
+  invalid-domain: 
+    title: ""
+    color: "error"
+    description: 
+      - "> The **domain** you entered is not __valid__ now!"
+      - "> Unable to proceed with data **retrieval.**"
+    image: ""
+    timeStamp: false
+    author:
+      name: ""
+      icon: ""
+      url: ""
+    footer:
+      text: "Requested by {user_tag}"
+      icon: "{user_icon}"
+    fields: []
+  
+  invalid-query: 
+    title: "❌ Invalid Query For Domain"
+    color: "custom"
+    description: 
+      - "> We have **received** the results of the __queried__."
+      - "> You can see the *related information* below!"
+      - "```🔗 Information```"
+      - "> Domain: `{domain}`"
+    image: ""
+    timeStamp: false
+    author:
+      name: ""
+      icon: ""
+      url: ""
+    footer:
+      text: "Requested by {user_tag}"
+      icon: "{user_icon}"
+    fields: 
+      - name: "🔗 __**Status**__"
+        value: "```🔴 Failed```"
+        inline: true 
+  
+  query-success:  
+    title: "✅ Query Domain Success"
+    color: "custom"
+    description: 
+      - "> We have **received** the results of the __queried__."
+      - "> You can see the *related information* below!"
+      - "```🔗 Information```"
+      - "> Domain: `{domain}`"
+      - "> Country: `{country} [{country_code}]`"
+    image: ""
+    timeStamp: false
+    author:
+      name: ""
+      icon: ""
+      url: ""
+    footer:
+      text: "Requested by {user_tag}"
+      icon: "{user_icon}"
+    fields: 
+      - name: "📡 __**Ip Address**__"
+        value: "```{ip_address}```"
+        inline: true
+      - name: "🚦 __**AS**__"
+        value: "```{as}```"
+        inline: true
+      - name: "📨 __**ISP**__"
+        value: "```{isp}```"
+        inline: true
+      - name: "🚞 __**City**__"
+        value: "```{city} [{region_code}]```"
+        inline: true
+  
+  # Update
+  auto-update: 
+    title: "✅ Automatic Updated Proxy"
+    color: "custom"
+    description: 
+      - "```🔗 Information:```"
+      - "> Updated By: <@{client_id}>"
+      - "> (`{client_id}`)"
+      - "> File Name: `{file_name}`"
+    thumbnail: ""
+    image: ""
+    timeStamp: false
+    author:
+      name: ""
+      icon: ""
+      url: ""
+    footer:
+      text: "Updated once every {update_time} minutes!"
+      icon: "{footer_icon}"
+    fields: 
+      - name: "🔧 __**Proxy Amount:**__"
+        value: "```{proxies} Proxies```"
+        inline: true
+
+  missing-url: 
+    title: "❌ Please Enter The URL"
+    color: "error"
+    description: 
+      - "> You haven't fully __filled__ in the **options**!"
+      - "> Please enter the URL for the *proxy update*!"
+      - "```📣 Information```"
+      - "> You need to enter the __URL__ with a correct"
+      - "> **format** and get the *right results*! Thanks"
+    image: ""
+    timeStamp: false
+    author:
+      name: ""
+      icon: ""
+      url: ""
+    footer:
+      text: "Requested by {user_tag}"
+      icon: "{user_icon}"
+    fields: []
+  
+  missing-config-url: 
+    title: "❌ Enter URL In Config"
+    color: "error"
+    description: 
+      - "> You haven't fully __filled__ in the **config**!"
+      - "> Please enter the URL for the *proxy*"
+      - "> *update* in to the configuration file!"
+      - "```📢 Notice:```"
+      - "> You need to enter the __URL__ with a correct"
+      - "> **format** and get the *right results*! Thanks"
+    image: ""
+    timeStamp: false
+    author:
+      name: ""
+      icon: ""
+      url: ""
+    footer:
+      text: "Requested by {user_tag}"
+      icon: "{user_icon}"
+    fields: []
+
+  invalid-url: 
+    title: "❌ Invalid Proxy URL"
+    color: "error"
+    description: 
+      - "> The __URL__ you just **entered** has an"
+      - "> *invalid format*. Please check again!"
+    image: ""
+    timeStamp: false
+    author:
+      name: ""
+      icon: ""
+      url: ""
+    footer:
+      text: "Requested by {user_tag}"
+      icon: "{user_icon}"
+    fields: 
+      - name: "🚨 __**URL**__"
+        value: "[URL Just Entered]({url})"
+        inline: true
+  
+  loading-proxy: 
+    title: "⏳ Getting Proxy Infiomation"
+    color: "custom"
+    description: 
+      - "> We are __conducting__ testing as well as obtaining"
+      - "> data of **Proxy**. This process may *take a while*!"
+    image: ""
+    timeStamp: false
+    author:
+      name: ""
+      icon: ""
+      url: ""
+    footer:
+      text: "Requested by {user_tag}"
+      icon: "{user_icon}"
+    fields: []
+  
+  update-success: 
+    title: "✅ Updated Proxy Success"
+    color: "custom"
+    description: 
+      - "> Proxy has been updated **successfully**. You can"
+      - "> check out the __information__ about this update!"
+      - "```🔗 Information:```"
+      - "> File Name: `{file_name}`"
+    image: ""
+    timeStamp: false
+    author:
+      name: ""
+      icon: ""
+      url: ""
+    footer:
+      text: "Updated by {user_tag}"
+      icon: "{user_icon}"
+    fields: 
+      - name: "💥 __**Proxy Amount:**__"
+        value: "```{proxies} Proxies```"
+        inline: true

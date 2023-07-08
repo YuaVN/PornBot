@@ -1,0 +1,94 @@
+config-version: "2.0.0"
+
+general: 
+  discord-token: ""
+  guild-id: "1087337300129751061"
+
+  client-id: "922437702421479454"
+
+  activity: 
+    # Toggle bot's state-changing feature
+    # when false => use message: [] to set activity
+    # when true => use randomMessages: [] to set activity
+    # * Adjust the change time via changeTime: <value>
+    random-status: true
+    # Time to change activity, in second
+    # * Only works when randomStatus: true
+    change-time: 10
+    # Change the bot's operational status
+    # * Available: dnd, idle, invisible, online 
+    status: "idle"
+    # Use for activity when randomStatus: false
+    # Activity type: PLAYING, WATCHING, STREAMING, LISTENING, COMPETING
+    # * Format: ["<activity type>", "<activity message>"]
+    # * => {uptime}: Display of active time
+    # * => {methods}: Show the number of methods
+    # * => {user_online}: Show the number of users who are online
+    message: ["WATCHING", "{user_online} currently online"]
+    # Use for activity when randomStatus: true
+    random-messages: 
+      - ["WATCHING", "{uptime} operation time"]
+      - ["PLAYING", "{methods} attack method"] 
+  
+  channels:
+    # These channels allow you to use commands in it!
+    white-list-room: 
+      - "1087337303808155652"
+      - "1087337301790691409"
+    # Channels that allow the use of the command (/crash)
+    crash-room: 
+      - "1087337301790691409"
+    # These channels notify the proxy auto update!
+    # Need AutoUpdate: true to work!
+    update-room: 
+      - "1087337301790691409"
+      - "1089557998113931305"
+  
+  # This feature will automatically download java for bot, very useful when using on host/node
+  auto-download-java: 
+    # Should java auto-download feature be enabled!
+    enabled: true
+    # Notify when skip file download
+    skip-notify: false
+    # URL to download java
+    url: "https://builds.openlogic.com/downloadJDK/openlogic-openjdk/8u262-b10/openlogic-openjdk-8u262-b10-linux-x64.tar.gz" 
+  
+  update: 
+    # Should update on startup be enabled!
+    # If enabled, it will update itself every time you start up
+    update-on-startup: false
+    # Should the auto-update feature be enabled?
+    auto-update: false
+    # Time automatically updated each time. In seconds!
+    time: 900
+    # Mode of update:
+    # * USER -> User needs to enter URL to update!
+    # * URL -> Use the URL available in the config!
+    # * BOTH -> If a user enters a URL, that user's URL will be used!
+    #  If the user does not enter the URL, the URL available in the configuration will be used!
+    mode: BOTH
+    # Proxy file name
+    file-name: "proxies.txt"
+    # Proxy update url
+    url: 
+      - "https://api.openproxylist.xyz/socks4.txt"
+      - "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks4.txt"
+      - "https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/socks4.txt"
+      - "https://raw.githubusercontent.com/roosterkid/openproxylist/main/SOCKS4_RAW.txt"
+      - "https://raw.githubusercontent.com/saschazesiger/Free-Proxies/master/proxies/socks4.txt"
+      - "https://raw.githubusercontent.com/UptimerBot/proxy-list/main/proxies/socks4.txt"
+      - "https://proxyspace.pro/socks4.txt"
+      - "https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/socks4.txt"
+      - "https://raw.githubusercontent.com/monosans/proxy-list/main/proxies_anonymous/socks4.txt"
+      - "https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-socks4.txt"
+      - "https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/socks4.txt"
+      - "http://worm.rip/socks4.txt"
+      - "https://www.proxy-list.download/api/v1/get?type=socks4"
+      - "https://raw.githubusercontent.com/HyperBeats/proxy-list/main/socks4.txt"
+      - "https://raw.githubusercontent.com/mmpx12/proxy-list/master/socks4.txt"
+      - "https://raw.githubusercontent.com/saschazesiger/Free-Proxies/master/proxies/socks4.txt"
+      - "https://raw.githubusercontent.com/B4RC0DE-TM/proxy-list/main/SOCKS4.txt"
+  
+
+
+  

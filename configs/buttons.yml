@@ -1,0 +1,20 @@
+buttons: 
+  confirm-stop: 
+    customId: "hexbot-confirmstop"
+    label: "Confirm"
+    style: "success"
+    disabled: false 
+    url: ""
+    emoji: 
+      enabled: true
+      id: "✅"
+  
+  stop-attacked: 
+    customId: "hexbot-stopattacked" 
+    label: "Stop Attack"
+    style: "danger"
+    disabled: false 
+    url: ""
+    emoji: 
+      enabled: true
+      id: "⭕"

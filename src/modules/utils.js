@@ -77,20 +77,16 @@ module.exports = {
     },
     getVersionArr: () => {
         let arr = [];
-
-        for (let v of m["version-code"]) {
-            arr.push(v.version);
+        for (const v of m["version-code"]) {
+            arr.push(v["version"]);
         }
-
         return arr;
     },
     getMethodArr: () => {
         let arr = [];
-
         for (let me of m["methods"]) {
             arr.push(me.name);
         }
-
         return arr;
     },
     /**
